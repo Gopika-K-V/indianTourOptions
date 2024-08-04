@@ -1,0 +1,46 @@
+@import "../../styles/utils";
+
+.contact_section{
+    padding: 60px 0;
+    scroll-margin-top: 50px;
+    @include max(575.98){
+        padding: 40px 0;
+    }
+}
+
+.contact_wrapper{
+    margin-top: 40px;
+    :global(.row){
+        align-items: center;
+        --bs-gutter-x: 70px;
+        @include max(575.98){
+            --bs-gutter-x: 0px;
+            --bs-gutter-y: 40px;
+        }
+    }
+    .map_wrapper{
+        height: auto;
+    }
+    .contact_details{
+        &_title{
+            font-size: 18px;
+            font-weight: $semi-bold;
+            color: $white;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+        .data{
+            color: $white;
+            font-size: 16px;
+            font-weight: $semi-bold;
+            margin-bottom: 15px;
+            a{
+                color: $white;
+                transition: 0.3s all ease-in-out;
+                @include hover{
+                    color: $bg-color-4;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+@import "../../styles/utils";
+
+.fixed_part{
+    position: fixed;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9;
+    height: auto;
+    width: max-content;
+}
+.button_wrapper{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    .icon_btn{
+        border-radius: 40px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        background-color: $black;
+        --bs-btn-padding-x: 8px;
+        --bs-btn-padding-y: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        transform: translateX(-82px);
+        transition: 0.3s all ease-in-out;
+        span{
+            color: $white;
+            font-weight: 14px;
+            padding-inline-end: 10px;
+        }
+        @include hover{
+            transform: translateX(0);
+        }
+    }
+}

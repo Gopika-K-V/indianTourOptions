@@ -1,0 +1,57 @@
+@import "../../styles/utils";
+
+.home_banner {
+    position: relative;
+    .img_section{
+        width: 100%;
+        position: relative;
+        z-index: 2;
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #00000096;
+            z-index: 3;
+        }
+        figure{
+            --bs-aspect-ratio: calc((480/1600)* 100%);
+            margin-bottom: 0;
+            @include max(575.98){
+                --bs-aspect-ratio: calc((343/375)* 100%);
+            }
+        }
+    }
+    .content_section{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        .main_title{
+            font-family: $primary-font;
+            color: $white;
+            font-size: 55px;
+            font-weight: $bold;
+            margin-bottom: 0;
+            @include max(767.98){
+                font-size: 40px;
+            }  
+        }
+        .banner_desc{
+            font-family: $primary-font;
+            color: $white;
+            font-size: 22px;
+            max-width: 500px;
+            line-height: 1.4;
+            margin-bottom: 0;
+            margin-top: 25px;
+        }
+    }
+}

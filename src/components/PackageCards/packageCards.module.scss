@@ -1,0 +1,18 @@
+@import "../../styles/utils";
+
+.specification_section{
+    padding: 60px 0;
+    @include max(575.98){
+        padding: 40px 0;
+    }
+    .cards_wrapper{
+        margin-top: 30px;
+        :global(.row){
+            --bs-gutter-x: 30px;
+            --bs-gutter-y: 30px;
+            @include max(575.98){            
+                --bs-gutter-x: 0px;
+            }
+        }
+    }
+}

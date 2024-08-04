@@ -1,0 +1,59 @@
+import React from 'react'
+import { Link } from 'react-router-dom';
+import Iconmoon from '../Icomoon/icoMoon';
+import styles from "./fixedButtonsMobile.module.scss";
+import useHeaderToFix from '../../customHooks/useHeaderToFix';
+
+const FixedButtonsMobile = () => {
+  const isHeaderFixed = useHeaderToFix();
+  const visibleClass = isHeaderFixed? styles.visible : "";
+
+  return (
+    <div className={`${styles.fixed_buttons_mob} ${visibleClass} d-sm-none`}>
+        <div className={styles.button_wrapper}>
+          {SOCIAL_ICONS.map((item) =>{
+            return(
+              <Link key={item.id} to={item.link} className={`btn ${styles.icon_btn}`} target="_blank">
+                <Iconmoon icon={item.icon} size={30} />
+              </Link>
+              )
+            })}
+        </div>
+    </div>
+  )
+}
+
+export default FixedButtonsMobile;
+
+const SOCIAL_ICONS = [
+    {
+      id: 1,
+      icon: "whatsapp1",
+      link:`https://wa.me/8156881960?text="HI"`,
+      text: "Whatsapp",
+    },
+    {
+      id: 2,
+      icon: "icon-facebook",
+      link:`https://wa.me/8156881960?text="HI"`,
+      text: "Facebook",
+    },
+    {
+      id: 3,
+      icon: "icon-linkedIn",
+      link:`https://wa.me/8156881960?text="HI"`,
+      text: "LinkedIn",
+    },
+    {
+      id: 4,
+      icon: "icon-x",
+      link:`https://wa.me/8156881960?text="HI"`,
+      text: "Twitter",
+    },
+    {
+      id: 5,
+      icon: "icon-youtube",
+      link:`https://wa.me/8156881960?text="HI"`,
+      text: "Youtube",
+    },
+]

@@ -1,0 +1,65 @@
+@import "../../styles/utils";
+
+.package_card{
+    width: 100%;
+    position: relative;
+    @include hover{
+        .img_wrapper{
+            img{
+                transform: scale(1.03);
+            }
+        }
+        .content_wrapper{
+            bottom: 0;
+            .content_sub_text{
+                opacity: 1;
+            }
+        }
+    }
+    .img_wrapper{
+        --bs-aspect-ratio: calc((230/350) * 100%);
+        border-radius: 6px;
+        overflow: hidden;
+        transform: translateZ(0);
+        &::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #00000096;
+            z-index: 3;
+        }
+        img{
+            transition: 0.3s all ease-in-out;
+            will-change: transform;
+        }
+    }
+    .content_wrapper{
+        position: absolute;
+        left: 0;
+        bottom: -60px;
+        padding: 20px;
+        z-index: 5;
+        transition: 0.3s all ease-in-out;
+        .content_text{
+            font-size: 20px;
+            color: $white;
+            line-height: 1.4;
+            margin-bottom: 0;
+            font-weight: $semi-bold;
+            @include lineClamp(2);
+        }
+        .content_sub_text{
+            font-size: 16px;
+            color: $white;
+            line-height: 1.4;
+            margin-bottom: 0;
+            font-weight: $regular;
+            margin-top: 8px;
+            opacity: 0;
+            transition: 0.3s all ease-in-out;
+        }
+    }
+}

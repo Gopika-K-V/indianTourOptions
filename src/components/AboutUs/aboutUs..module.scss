@@ -1,0 +1,25 @@
+@import "../../styles/utils";
+
+.about_us{
+    background-color: $bg-color-5;
+    padding: 60px 0;
+    .content_wrapper{
+        margin-top: 35px;
+        .row{
+            --bs-gutter-x: 50px;
+            @include max(991.98){
+                --bs-gutter-x: 0px;
+                --bs-gutter-y: 50px;
+            }
+    
+        }
+    }
+    .img_wrapper{
+        figure{
+            margin-bottom: 0;
+            &.ratio{
+                --bs-aspect-ratio: calc((420/630)*100%);
+            }
+        }
+    }
+}

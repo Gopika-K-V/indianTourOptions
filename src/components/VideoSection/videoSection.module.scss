@@ -1,0 +1,25 @@
+@import '../../styles/utils';
+
+.video_section{
+    padding: 60px 0;
+    @include max(575.98){
+        padding: 40px 0;
+    }
+    .video_container{
+        margin-top: 35px;
+        max-width: 100%;
+        position: relative;
+        z-index: 2;
+        border-radius: 6px;
+        overflow: hidden;
+        .addon_img{
+            position: absolute;
+            left: -45px;
+            top: -45px;
+            z-index: 1;
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+        }
+    }
+}

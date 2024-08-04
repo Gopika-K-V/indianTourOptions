@@ -1,0 +1,49 @@
+@import '../../styles/utils';
+
+
+.packages_section{
+    padding: 60px 0;
+    scroll-margin-top: 50px;
+    .packages_wrapper{
+        margin-top: 50px;
+        .packages_tabs{
+            .nav{
+                justify-content: center;
+                --bs-border-width: 0px;
+                .nav-link{
+                    --bs-nav-link-color: #{$black};
+                    --bs-nav-link-font-size: 14px;
+                    --bs-nav-link-font-weight: #{$regular};
+                    font-family: $primary-font;
+                    border: none;
+                    transition: 0.3s color ease-in-out;
+                    --bs-nav-link-hover-color: #{$primary-color};
+                    --bs-nav-tabs-link-active-color: #{$primary-color};
+                    position: relative;
+                    &::before{
+                        position: absolute;
+                        content: "";
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        display: block;
+                        height: 2px;
+                        background-color: $primary-color;
+                        transition: 0.3s transform ease-in-out;
+                        transform: scaleX(0);
+                        transform-origin: right;
+                    }
+                    &.active{
+                        &::before{
+                            transform: scaleX(1);
+                            transform-origin: left;
+                        }
+                    }
+                }
+            }
+        }
+        .tab-content{
+            margin-top: 35px;
+        }
+    }
+}

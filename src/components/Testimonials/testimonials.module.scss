@@ -1,0 +1,64 @@
+@import "../../styles/utils";
+
+.testimonial_section{
+    padding: 60px 0;
+    scroll-margin-top: 50px;
+    @include max(575.98){
+        padding: 40px 0;
+    }
+    :global{
+        .swiper{
+            padding-bottom: 40px;
+            .swiper-pagination{
+                --swiper-pagination-bottom: -0px;
+                .swiper-pagination-bullet{
+                    --swiper-pagination-bullet-inactive-color: #{$white};
+                    opacity: 0.5;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 6px;
+                    overflow: hidden;
+                    border: none;
+                    transition: 0.3s all ease-in-out;
+                    &.swiper-pagination-bullet-active{
+                        width: 18px;
+                        --swiper-pagination-color: #{$white};
+                    }
+                }
+            }
+        }
+    }
+}
+
+.testimonial{
+    &_wrapper{
+        margin-top: 40px;
+    }
+    &_item{
+        padding: 40px;
+        background-color: $white;
+        border-radius: 4px;
+    }
+    &_content{
+        font-size: 16px;
+        font-weight: $regular;
+        color: $black;
+        font-family: $primary-font;
+        line-height: 1.5;
+        @include lineClamp(4);
+        margin-bottom: 0;
+    }
+    &_author{
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        &_name{
+            font-size: 14px;
+            font-weight: $semi-bold;
+            color: $black;
+            margin-bottom: 0;
+            line-height: 1.3;
+        }
+    }
+}

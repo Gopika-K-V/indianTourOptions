@@ -1,0 +1,25 @@
+@import "../../styles/utils";
+
+.img_with_text{
+    padding: 60px 0;
+    scroll-margin-top: 50px;
+    @include max(575.98){
+        padding: 40px 0;
+    }
+    :global(.row){
+        --bs-gutter-x: 50px;
+        @include max(991.98){
+            --bs-gutter-x: 0px;
+            --bs-gutter-y: 50px;
+        }
+
+    }
+    .img_wrapper{
+        width: 100%;
+        border-radius: 6px;
+        overflow: hidden;
+        figure{
+            --bs-aspect-ratio: calc((420/630)*100%);
+        }
+    }
+}

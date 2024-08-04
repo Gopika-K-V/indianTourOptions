@@ -1,0 +1,24 @@
+@import "../../styles/utils";
+
+.fixed_buttons_mob{
+    position: fixed;
+    left: 50%;
+    bottom: -70px;
+    width: max-content;
+    max-width: 95vw;
+    height: auto;
+    background-color: $white;
+    transform: translateX(-50%);
+    padding: 10px 16px;
+    border-radius: 16px;
+    z-index: 9;
+    transition: 0.3s all ease-in-out;
+    &.visible{
+        bottom: 20px;
+    }
+    .button_wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,112 @@
+// @import '~bootstrap/scss/bootstrap';
+@import "./utils";
+
+body{
+    --bs-header-height: 90px;
+    --bs-body-bg: #{$black};
+    overflow-x: hidden;
+    // padding-top: var(--bs-header-height);
+    background-color: var(--bs-body-bg);
+    @include max(575.98){
+        --bs-header-height: 60px;
+    }
+    &::-webkit-scrollbar {
+        width: 6px;
+      }
+      
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+       
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: #000; 
+        border-radius: 8px;
+      }
+    
+}
+main{
+    --bs-body-bg: #{$black};
+    background-color: var(--bs-body-bg);
+    font-family: $primary-font;
+}
+:root{
+    --bs-header-height : 90px;
+}
+*{
+    box-sizing: border-box;
+}
+.title{
+    &_main{
+        font-size: 30px;
+        font-weight: $bold;
+        --bs-title-main-font-color : #{$white};
+        color: var(--bs-title-main-font-color);
+        text-align: center;
+        margin-bottom: 0;
+        @include max(767.98){
+            font-size: 20px;
+        }
+    }
+    &_lg{
+        font-size: 36px;
+        font-weight: $bold;
+        --bs-title-lg-font-color : #{$white};
+        color: var(--bs-title-lg-font-color);
+        text-align: start;
+        margin-bottom: 0; 
+        @include max(767.98){
+            font-size: 24px;
+        }  
+    }
+}
+
+.sub_title{
+    font-size: 16px;
+    font-weight: $regular;
+    --bs-sub-title-font-color: #{$white};
+    color: var(--bs-sub-title-font-color);
+    margin-top: 15px;
+    margin-bottom: 0;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 85%;
+    margin-inline: auto;
+    @include max(767.98){
+        max-width: 95%;
+    }
+}
+
+.sub_content{
+    font-size: 16px;
+    font-weight: $regular;
+    --bs-sub-content-font-color: #{$white};
+    color: var(--bs-sub-content-font-color);
+    margin-top: 25px;
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+.container{
+    @include min(1600){
+        max-width: 1440px;
+    }
+}
+figure{
+    margin: 0 0 0 0 !important;
+}
+
+
+img{
+  max-width: 100%;
+}
+
+[data-anim] {
+    transform: translateY(100px);
+    transition: all .5s cubic-bezier(.56,.28,.53,.8);
+}
+[data-anim].visible {
+    opacity: 1;
+    transform: none!important;
+}
