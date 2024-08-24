@@ -8,7 +8,7 @@ const BannerCarousel = () => {
       <Carousel fade>
         {BannerItems.map((item) => {
           return(
-            <Carousel.Item key={item.id} interval={15000}>
+            <Carousel.Item key={item.id} interval={5000}>
                 {item?.type === "image" ?
                   <div className={styles.img_section}>
                     <figure className={`ratio`}>
@@ -41,48 +41,48 @@ const BannerCarousel = () => {
 export default BannerCarousel;
 
 const BannerItems = [
-  // {
-  //   id: 1,
-  //   title: "Indian Tour Options",
-  //   subtitle: "Escape The Ordinary",
-  //   img: assets.BanneImg1,
-  //   type: "image",
-  // },
-  // {
-  //   id: 2,
-  //   title: "Cycle Tours",
-  //   subtitle: "Where you experience something different",
-  //   img: assets.BanneImg2,
-  //   type: "image",
-    
-  // },
-  // {
-  //   id: 3,
-  //   title: "Plantation Visit",
-  //   subtitle: "Indian ",
-  //   img: assets.BanneImg3,
-  //   type: "image",
-    
-  // },
-  // {
-  //   id: 4,
-  //   title: "Ayrvedic Treatment",
-  //   subtitle: "Indian ",
-  //   img: assets.BanneImg4,
-  //   type: "image",
-    
-  // },
-  // {
-  //   id: 5,
-  //   title: "Trekking",
-  //   subtitle: "Indian Tour Options",
-  //   img: assets.BanneImg5,
-  //   type: "image",
-    
-  // },
   {
-    id: 6,
-    img: assets.BannerVideo,
-    type: "video",
+    id: 1,
+    title: "Indian Tour Options",
+    subtitle: "Escape The Ordinary",
+    img: assets.BanneImg1,
+    type: "image",
   },
+  {
+    id: 2,
+    title: "Cycle Tours",
+    subtitle: "Where you experience something different",
+    img: assets.BanneImg2,
+    type: "image",
+    
+  },
+  {
+    id: 3,
+    title: "Plantation Visit",
+    subtitle: "Indian ",
+    img: assets.BanneImg3,
+    type: "image",
+    
+  },
+  {
+    id: 4,
+    title: "Ayrvedic Treatment",
+    subtitle: "Indian ",
+    img: assets.BanneImg4,
+    type: "image",
+    
+  },
+  {
+    id: 5,
+    title: "Trekking",
+    subtitle: "Indian Tour Options",
+    img: assets.BanneImg5,
+    type: "image",
+    
+  },
+  // {
+  //   id: 6,
+  //   img: assets.BannerVideo,
+  //   type: "video",
+  // },
 ]
