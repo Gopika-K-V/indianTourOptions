@@ -8,6 +8,7 @@ import VideoSection from '../../components/VideoSection/videoSection';
 import Testimonials from '../../components/Testimonials/testimonials';
 import Contact from '../../components/Contact/contact';
 import HomeBanner from '../../components/HomeBanner/homeBanner';
+import IndianOptions from '../../components/IndianOptions/indianOptions';
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
         <PackageCards/>
         <DestinationSection/>
         <Testimonials/>
+        <IndianOptions/>
         <Contact/>
     </>
   )

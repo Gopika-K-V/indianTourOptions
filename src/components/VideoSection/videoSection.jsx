@@ -10,7 +10,7 @@ const VideoSection = () => {
             <h2 className={`title_main`}>Featured Video</h2>
             <div className={styles.video_container}>
                 <span className={styles.addon_img}>
-                    <img src="/src/assets/Images/addon_img/dots.png" alt="addon-img"/>
+                    <img src={assets.dotImage} alt="addon-img"/>
                 </span>
                 <video width="100%" controls autoplay>
                     <source src={assets.BannerVideo} type="video/mp4"/>

@@ -8,7 +8,7 @@ const BannerCarousel = () => {
       <Carousel fade>
         {BannerItems.map((item) => {
           return(
-            <Carousel.Item key={item.id} interval={5000}>
+            <Carousel.Item key={item.id} interval={8000}>
                 {item?.type === "image" ?
                   <div className={styles.img_section}>
                     <figure className={`ratio`}>

@@ -4,6 +4,10 @@ const aboutImage = new URL("./Images/about-img.png", import.meta.url).href;
 const thumbImage = new URL("./Images/thumb_img.jpg", import.meta.url).href;
 
 
+const dotImage = new URL("./Images/addon_img/dots.png", import.meta.url).href;
+const mandalaImage = new URL("./Images/addon_img/mandala-image.png", import.meta.url).href;
+
+
 const BanneImg1 = new URL("./Images/banners/Theyyam.jpg", import.meta.url).href;
 const BanneImg2 = new URL("./Images/banners/plantation_visit.jpg", import.meta.url).href;
 const BanneImg3 = new URL("./Images/banners/cycle_tours.jpg", import.meta.url).href;
@@ -16,6 +20,9 @@ const assets  ={
     SpecificationImage,
     aboutImage,
     thumbImage,
+
+    dotImage,
+    mandalaImage,
 
     BanneImg1,
     BanneImg2,

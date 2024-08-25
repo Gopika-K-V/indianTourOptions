@@ -18,7 +18,7 @@
     }
     .img_wrapper{
         --bs-aspect-ratio: calc((230/350) * 100%);
-        border-radius: 6px;
+        border-radius: 32px;
         overflow: hidden;
         transform: translateZ(0);
         &::after{

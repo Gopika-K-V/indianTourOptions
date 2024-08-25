@@ -16,10 +16,32 @@
     }
     .img_wrapper{
         width: 100%;
-        border-radius: 6px;
+        border-radius: 32px;
         overflow: hidden;
         figure{
             --bs-aspect-ratio: calc((420/630)*100%);
         }
+    }
+}
+
+.addon_image{
+    position: fixed;
+    right: -35%;
+    top: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.3;
+    filter: grayscale(0.5);
+    width: 65%;
+    height: 65%;
+    @include max(575.98){
+        right: -69%;
+        top: 8%;
+        opacity: 0.3;
+        width: 500px;
+        height: 500px;
+    }
+    figure{
+        --bs-aspect-ratio: calc((400/400)*100%);
     }
 }

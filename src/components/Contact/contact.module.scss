@@ -20,6 +20,8 @@
     }
     .map_wrapper{
         height: auto;
+        border-radius: 32px;
+        overflow: hidden;
     }
     .contact_details{
         &_title{

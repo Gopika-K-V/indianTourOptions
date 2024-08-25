@@ -21,6 +21,23 @@
             @include max(575.98){
                 --bs-aspect-ratio: calc((343/375)* 100%);
             }
+            img{
+                transform: scale(1);
+                transition: 8s all ease-in-out;
+            }
+        }
+    }
+    :global{
+        .carousel {
+            .carousel-inner{
+                .carousel-item{
+                    &.active{
+                        img{
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
         }
     }
     .video_section{
