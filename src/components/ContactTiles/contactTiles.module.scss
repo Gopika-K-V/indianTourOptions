@@ -1,0 +1,105 @@
+@import "../../styles/utils";
+
+.contact{
+    &_tiles{
+        padding-top: 60px;
+        @include max(575.98){
+            padding-top: 40px;
+        }
+    }
+    &_wrapper{
+        margin-top: 24px;
+        :global(.row){
+            --bs-gutter-x: 20px;
+            --bs-gutter-y: 20px;
+            @include max(575.98){
+                --bs-gutter-x: 14px;
+                --bs-gutter-y: 14px;
+
+            }
+        }
+    }
+    &_item{
+        padding: 16px;
+        border-radius: 8px;
+        text-decoration: none;
+        border: 4px solid $font-color;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        row-gap: 8px;
+        flex-direction: column;
+        transition: 0.3s all ease-in-out;
+        svg{
+            path{
+            transition: 0.3s all ease-in-out;
+            }
+        }
+        span{
+            color: $black;
+            font-size: 16px;
+            font-weight: $font-medium;
+            transition: 0.3s all ease-in-out;
+        }
+        @include hover{
+            border-color: $custom-yellow;
+            svg{
+                path{
+                    fill: $custom-yellow !important;
+                }
+            }
+            
+        }
+    }
+}
+.media{
+    &_wrapper{
+        margin-top: 24px;
+        :global(.row){
+            --bs-gutter-x: 20px;
+            --bs-gutter-y: 20px;
+            @include max(575.98){
+                --bs-gutter-x: 14px;
+                --bs-gutter-y: 14px;
+
+            }
+        }
+    }
+    &_item{
+        padding: 10px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-decoration: none;
+        width: max-content;
+        margin-inline: auto;
+        background-color: $font-color;
+        transition: 0.3s all ease-in-out;
+        @include max(575.98){
+            padding: 6px;
+        }
+        span{
+            display: block;
+            margin-top: 6px;
+            color: $font-color;
+            font-weight: $medium;
+            transition: 0.3s all ease-in-out;
+        }
+        svg{
+            border-radius: 50%;
+            path{
+                transition: 0.3s all ease-in-out;
+            }
+        }
+        @include hover{
+            background-color: $custom-yellow;
+            svg{
+                path{
+                    fill: $font-color !important;
+                }
+            }
+        }
+    }
+}

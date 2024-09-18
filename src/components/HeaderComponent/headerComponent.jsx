@@ -104,7 +104,7 @@ const navLinks = [
     },
     {
         id: 4,
-        link: "tel:+91 8156881960",
+        link: "/contact-us",
         linkText: "Contact",
     },
 ]

@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 
-// Custom hook to handle fixed header logic
 const useHeaderToFix = () => {
   const [isHeaderFixed, setIsHeaderFixed] = useState(false);
 

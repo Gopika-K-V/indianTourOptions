@@ -21,7 +21,7 @@
     }
     .image_grid{
         display: block;
-        border-radius: 32px;
+        border-radius: 8px;
         overflow: hidden;
         .image_wrapper{
             --bs-aspect-ratio: calc((314/365) * 100%);

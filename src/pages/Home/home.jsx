@@ -21,7 +21,6 @@ const Home = () => {
         <DestinationSection/>
         <Testimonials/>
         <IndianOptions/>
-        <Contact/>
     </>
   )
 }

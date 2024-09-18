@@ -4,8 +4,8 @@ $secondary-color : #FFFFFF !default;
 
 $font-color: #0000008c;
 
-$primary-font : 'Oxygen', sans-serif;
-$secondary-font : 'Lexend', sans-serif;
+$primary-font : "Inter", sans-serif;
+$secondary-font : "Libre Baskerville", serif;
 
 // Custom-color
 
@@ -32,7 +32,9 @@ $text-off: #281107 !default;
 $white: #fff !default;
 $black: #000 !default;
 $red: #C60C02 !default;
-
+$custom-yellow: #ffc65c;
+$body-bg: #f9f9f7;
+$font-color: #141414;
 
 $d-ico: 'deafult-icons' !default;
 //button

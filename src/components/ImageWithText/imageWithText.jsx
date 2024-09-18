@@ -34,11 +34,11 @@ const ImageWithText = () => {
                         </div>
                     </div>
                 </div>
-                <div className={styles.addon_image}>
+                {/* <div className={styles.addon_image}>
                     <figure className={`ratio`}>
                         <img src={assets.mandalaImage} alt="addon-img"/>
                     </figure>
-                </div>
+                </div> */}
             </div>
         </Animate>
     )

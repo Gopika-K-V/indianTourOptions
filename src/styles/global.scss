@@ -3,7 +3,7 @@
 
 body{
     --bs-header-height: 90px;
-    --bs-body-bg: #{$black};
+    --bs-body-bg: #{$body-bg};
     overflow-x: hidden;
     // padding-top: var(--bs-header-height);
     background-color: var(--bs-body-bg);
@@ -27,7 +27,7 @@ body{
     
 }
 main{
-    --bs-body-bg: #{$black};
+    --bs-body-bg: #{$body-bg};
     background-color: var(--bs-body-bg);
     font-family: $primary-font;
 }
@@ -41,7 +41,8 @@ main{
     &_main{
         font-size: 30px;
         font-weight: $bold;
-        --bs-title-main-font-color : #{$white};
+        font-family: $secondary-font;
+        --bs-title-main-font-color : #{$font-color};
         color: var(--bs-title-main-font-color);
         text-align: center;
         margin-bottom: 0;
@@ -52,7 +53,8 @@ main{
     &_lg{
         font-size: 36px;
         font-weight: $bold;
-        --bs-title-lg-font-color : #{$white};
+        font-family: $secondary-font;
+        --bs-title-lg-font-color : #{$font-color};
         color: var(--bs-title-lg-font-color);
         text-align: start;
         margin-bottom: 0; 
@@ -65,7 +67,7 @@ main{
 .sub_title{
     font-size: 16px;
     font-weight: $regular;
-    --bs-sub-title-font-color: #{$white};
+    --bs-sub-title-font-color: #{$font-color};
     color: var(--bs-sub-title-font-color);
     margin-top: 15px;
     margin-bottom: 0;
@@ -81,7 +83,7 @@ main{
 .sub_content{
     font-size: 16px;
     font-weight: $regular;
-    --bs-sub-content-font-color: #{$white};
+    --bs-sub-content-font-color: #{$font-color};
     color: var(--bs-sub-content-font-color);
     margin-top: 25px;
     margin-bottom: 0;

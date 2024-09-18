@@ -3,11 +3,9 @@
 .fixed_part{
     position: fixed;
     left: 0px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 38%;
     z-index: 9;
     height: auto;
-    width: max-content;
 }
 .button_wrapper{
     display: flex;
@@ -15,23 +13,37 @@
     row-gap: 10px;
     .icon_btn{
         border-radius: 40px;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-        background-color: $black;
-        --bs-btn-padding-x: 8px;
-        --bs-btn-padding-y: 8px;
+        background-color: $font-color;
+        --bs-btn-padding-x: 4px;
+        --bs-btn-padding-y: 4px;
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        transform: translateX(-82px);
+        transform: translateX(10px);
         transition: 0.3s all ease-in-out;
+        width: max-content;
         span{
-            color: $white;
-            font-weight: 14px;
-            padding-inline-end: 10px;
+            color: $font-color;
+            font-size: 0;
+            padding-inline-end: 0px;
+            transition: 0.3s all ease-in-out;
+        }
+        svg{
+            path{
+                transition: 0.3s all ease-in-out;
+            }
         }
         @include hover{
-            transform: translateX(0);
+            background-color: $custom-yellow;
+            span{
+                font-size: 14px;
+                padding-inline-end: 10px;
+            }
+            svg{
+                path{
+                    fill: $font-color !important;
+                }
+            }
         }
     }
 }
