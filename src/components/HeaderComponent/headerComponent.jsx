@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import styles from "./headerComponent.module.scss";
-import Logo from "../../assets/Images/Logo.png";
+import Logo from "../../assets/Images/logo.svg";
 import { Link } from 'react-router-dom';
 import MegaMenu from "../MegaMenu";
 import assets from '../../assets/assets';
@@ -104,6 +104,11 @@ const navLinks = [
     },
     {
         id: 4,
+        link: "/",
+        linkText: "Calender",
+    },
+    {
+        id: 5,
         link: "/contact-us",
         linkText: "Contact",
     },

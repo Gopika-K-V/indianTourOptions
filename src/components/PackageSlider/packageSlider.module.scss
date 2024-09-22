@@ -1,0 +1,13 @@
+@import "../../styles/utils";
+
+.package_slider{
+    padding: 60px 0;
+    scroll-margin-top: 50px;
+    @include max(575.98) {
+        padding: 40px 0;
+    }
+    .slider_wrapper{
+        margin-top: 40px;
+    }
+}
+

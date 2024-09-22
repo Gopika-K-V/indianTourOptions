@@ -1,0 +1,61 @@
+@import "../../../styles/utils";
+
+.package_card {
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+    position: relative;
+
+    figure {
+        --bs-aspect-ratio: calc((530/400) * 100%);
+        z-index: 2;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        background: hsla(0, 0%, 58%, 1);
+        z-index: 3;
+        background: linear-gradient(180deg, hsl(0deg 0% 4.08% / 0%) 0%, hsl(0deg 0% 10.38% / 40%) 100%);
+    }
+}
+
+.content_section {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    padding: 16px;
+    z-index: 3;
+    .title {
+        font-size: 14px;
+        font-weight: $semi-bold;
+        color: $white;
+    }
+
+    .content {
+        padding: 4px 6px;
+        background-color: $custom-yellow;
+        color: $font-color;
+        font-size: 11px;
+        border-radius: 4px;
+        font-weight: $bold;
+        margin-top: 6px;
+        width: max-content;
+        max-width: 100%;
+    }
+
+    .price {
+        margin-top: 6px;
+        font-size: 12px;
+        font-weight: $semi-bold;
+        color: $white;
+    }
+}

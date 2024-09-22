@@ -8,37 +8,21 @@ const ImageWithText = () => {
     return (
         <Animate as='section' effect='fade-in' className={styles.img_with_text} id="specifications">
             <div className={`container-fluid`}>
-                <div className={`row align-items-center`}>
-                    <div className={`col-12 col-md-6`}>
+                <div className={`row justify-content-center`}>
+                    <div className={`col-12 col-md-6 col-lg-5`}>
                         <div className={styles.img_wrapper}>
                             <figure className={`ratio`}>
                                 <img src={assets.aboutImage} alt="img_with_text" />
                             </figure>
                         </div>
                     </div>
-                    <div className={`col-12 col-md-6`}>
+                    <div className={`col-12 col-md-6 col-lg-5`}>
                         <div className={styles.content_section}>
-                            <h4 className={`title_lg`}>Lorem ipsum</h4>
-                            <p className={`sub_content`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                deserunt mollit anim id est laborum.</p>
-                            <p className={`sub_content`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                deserunt mollit anim id est laborum.</p>
+                            <h4 className={`title_lg`}>A ticket to the uniqueness </h4>
+                            <p className={`sub_content`}>We, Indian Tour Options, specialize in crafting exclusive tour packages and unique experiences across South India. Realizing the depth of this rich cultural heritage and diverse landscapes, we offer a host of personalized itineraries that bring into view the most unique features like serene backwaters, ancient temples, vibrant festivals, and authentic local cuisine. Our highly professional team works towards offering outstanding service and unforgettable moments, making sure that each journey with us uncovers the hidden treasures and cultural beauty of South India. Explore the essence of this enchanting region with a tailored adventure that will exceed expectations.</p>
                         </div>
                     </div>
                 </div>
-                {/* <div className={styles.addon_image}>
-                    <figure className={`ratio`}>
-                        <img src={assets.mandalaImage} alt="addon-img"/>
-                    </figure>
-                </div> */}
             </div>
         </Animate>
     )

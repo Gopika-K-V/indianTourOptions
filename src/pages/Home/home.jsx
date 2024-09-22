@@ -9,13 +9,14 @@ import Testimonials from '../../components/Testimonials/testimonials';
 import Contact from '../../components/Contact/contact';
 import HomeBanner from '../../components/HomeBanner/homeBanner';
 import IndianOptions from '../../components/IndianOptions/indianOptions';
+import PackageSlider from '../../components/PackageSlider/packageSlider';
 
 const Home = () => {
   return (
     <>
         <BannerCarousel/>
         <ImageWithText/>
-        <VideoSection/>
+        <PackageSlider/>
         <HomeBanner/>
         <PackageCards/>
         <DestinationSection/>

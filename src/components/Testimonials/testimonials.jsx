@@ -53,7 +53,6 @@ const Testimonials = () => {
             })}
           </Swiper>
         </div>
-
       </div>
     </Animate>
   )

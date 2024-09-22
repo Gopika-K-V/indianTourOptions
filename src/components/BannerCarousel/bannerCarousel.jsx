@@ -12,7 +12,10 @@ const BannerCarousel = () => {
                 {item?.type === "image" ?
                   <div className={styles.img_section}>
                     <figure className={`ratio`}>
-                      <img src={item.img} alt="banner_img" />
+                      {/* Desktop Image */}
+                      <img src={item.imgDesktop} className='d-none d-sm-block' alt="banner_img" />
+                      {/* Mobile Image */}
+                      <img src={item.imgMobile} className='d-sm-none' alt="banner_img" />
                     </figure>
                   </div>
                 :
@@ -45,14 +48,16 @@ const BannerItems = [
     id: 1,
     title: "Indian Tour Options",
     subtitle: "Escape The Ordinary",
-    img: assets.BanneImg1,
+    imgDesktop: assets.theyamWeb,
+    imgMobile: assets.theyamMob,
     type: "image",
   },
   {
     id: 2,
     title: "Cycle Tours",
     subtitle: "Where you experience something different",
-    img: assets.BanneImg2,
+    imgDesktop: assets.walkWeb,
+    imgMobile: assets.walkMob,
     type: "image",
     
   },
@@ -60,7 +65,8 @@ const BannerItems = [
     id: 3,
     title: "Plantation Visit",
     subtitle: "Indian ",
-    img: assets.BanneImg3,
+    imgDesktop: assets.fdWeb,
+    imgMobile: assets.fdMob,
     type: "image",
     
   },
@@ -68,7 +74,8 @@ const BannerItems = [
     id: 4,
     title: "Ayrvedic Treatment",
     subtitle: "Indian ",
-    img: assets.BanneImg4,
+    imgDesktop: assets.boatWeb,
+    imgMobile: assets.boatMob,
     type: "image",
     
   },
@@ -76,7 +83,8 @@ const BannerItems = [
     id: 5,
     title: "Trekking",
     subtitle: "Indian Tour Options",
-    img: assets.BanneImg5,
+    imgDesktop: assets.elephantWeb,
+    imgMobile: assets.elephantMob,
     type: "image",
     
   },
