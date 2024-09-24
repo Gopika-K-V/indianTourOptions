@@ -1,0 +1,81 @@
+@import "../../styles/utils";
+
+.search_component{
+    position: relative;
+    background-color: $custom-yellow;
+    border-radius: 8px;
+    padding: 16px;
+    img{
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        inset-inline-start: 15px;
+        pointer-events: none;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    input{
+        border:none;
+        background-color: transparent;
+        font-size: 16px;
+        font-weight: $regular;
+        width: 100%;
+        color: $font-color;
+        padding-inline-start: 45px;
+        outline: none;
+        box-shadow: unset;
+        &::placeholder{
+            color: $font-color;
+            opacity: 0.6;
+        }
+    }
+}
+
+.search_list{
+    position: absolute;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: $custom-yellow;
+    padding: 16px;
+    border-radius: 8px;
+    z-index: 9;
+    list-style: none;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    &_item{
+        padding-block: 8px;
+        &_link{
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            column-gap: 8px;
+            figure{
+                max-width: 60px;
+                --bs-aspect-ratio: calc((45/60) * 100%);
+                overflow: hidden;
+                img{
+                    transition: 0.3s all ease-in-out;
+                    will-change: transform;
+                }
+            }
+            .title{
+                font-size: 14px;
+                font-weight: $medium;
+                color: $font-color;
+            }
+            @include hover{
+                figure{
+                    img{
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+    }
+}

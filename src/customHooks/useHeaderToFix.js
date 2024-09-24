@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 
-const useHeaderToFix = () => {
+const useHeaderToFix = (threshold) => {
   const [isHeaderFixed, setIsHeaderFixed] = useState(false);
-
+  console.log(threshold,"djgdhf");
+  
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const headerThreshold = 200;
+      const headerThreshold = threshold ? threshold : 200;
 
       if (scrollY > headerThreshold) {
         setIsHeaderFixed(true);

@@ -1,0 +1,49 @@
+@import "../../styles/utils";
+
+.top_banner{
+    padding: 60px 0;
+    background-color: $body-bg;
+    .content_section{
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 6px;
+        padding-block-end: 150px;
+        padding-inline-start: 80px;
+
+        @include max(575.98){
+            padding-inline-start: 0;
+            padding-block-end: 35px;
+        }
+        .title{
+            font-size: 56px;
+            font-weight: $bold;
+            color: $font-color;
+            line-height: 1.2;
+            @include max(575.98){
+                font-size: 42px;
+            }
+        }
+        .sub_title{
+            font-size: 17px;
+            text-align: start;
+            font-weight: $medium;
+            color: $font-color;
+            line-height: 1.3;
+            @include max(575.98){
+                font-size: 16px;
+            }
+        }
+    }
+    .img_section{
+        figure{
+            --bs-aspect-ratio: calc((230/340) * 100%);
+        }
+    }
+}
+
+.banner_cards{
+    margin-top: -10%;
+}

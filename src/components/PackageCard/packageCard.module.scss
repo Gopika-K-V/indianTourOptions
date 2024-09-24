@@ -39,7 +39,8 @@
     .content_wrapper{
         position: absolute;
         left: 0;
-        bottom: -60px;
+        width: 100%;
+        bottom: -45px;
         padding: 20px;
         z-index: 5;
         transition: 0.3s all ease-in-out;
@@ -52,11 +53,14 @@
             @include lineClamp(2);
         }
         .content_sub_text{
-            font-size: 16px;
-            color: $white;
-            line-height: 1.4;
-            margin-bottom: 0;
-            font-weight: $regular;
+            padding: 4px 6px;
+            background-color: $custom-yellow;
+            color: $font-color;
+            font-size: 11px;
+            border-radius: 4px;
+            font-weight: $bold;
+            width: max-content;
+            max-width: 100%;
             margin-top: 8px;
             opacity: 0;
             transition: 0.3s all ease-in-out;

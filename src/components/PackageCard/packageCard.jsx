@@ -11,7 +11,7 @@ const PackageCard = ({props}) => {
             </figure>
             <div className={styles.content_wrapper}>
                 <p className={styles.content_text}>{props?.title}</p>
-                <p className={styles.content_sub_text}>{props?.content}</p>
+                <p className={`${styles.content_sub_text} mb-0`}>{props?.content}</p>
             </div>
         </Link>
     )

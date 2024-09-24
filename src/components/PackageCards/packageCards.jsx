@@ -29,7 +29,7 @@ const PackageCards = () => {
 
 export default PackageCards;
 
-const specificationCards =[
+export const specificationCards =[
     {
         id: 1,
         image: Assets.SpecificationImage,
@@ -40,28 +40,28 @@ const specificationCards =[
     {
         id: 2,
         image: Assets.thumbImage,
-        title: "Cycle Tours",
+        title: "Plantation Tour",
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
         link: "/",
     },
     {
         id: 3,
         image: Assets.SpecificationImage,
-        title: "Cycle Tours",
+        title: "Boat Tours",
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
         link: "/",
     },
     {
         id: 4,
         image: Assets.aboutImage,
-        title: "Cycle Tours",
+        title: "Kerala Package Tours",
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
         link: "/",
     },
     {
         id: 5,
         image: Assets.SpecificationImage,
-        title: "Cycle Tours",
+        title: "Kochi one day Tours",
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
         link: "/",
     },

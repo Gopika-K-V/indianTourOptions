@@ -10,10 +10,13 @@ import Contact from '../../components/Contact/contact';
 import HomeBanner from '../../components/HomeBanner/homeBanner';
 import IndianOptions from '../../components/IndianOptions/indianOptions';
 import PackageSlider from '../../components/PackageSlider/packageSlider';
+import HomeSearch from '../../components/HomeSearch/homeSearch';
+import HomeTopBanner from '../../components/HomeTopBanner/homeTopBanner';
 
 const Home = () => {
   return (
     <>
+        <HomeTopBanner/>
         <BannerCarousel/>
         <ImageWithText/>
         <PackageSlider/>

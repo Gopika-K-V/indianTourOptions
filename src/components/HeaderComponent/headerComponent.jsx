@@ -1,23 +1,40 @@
 import React, { Fragment } from 'react';
 import styles from "./headerComponent.module.scss";
-import Logo from "../../assets/Images/logo.svg";
+import LogoWhite from "../../assets/Images/Logo-white.svg";
+import LogoDark from "../../assets/Images/Logo-dark.svg";
 import { Link } from 'react-router-dom';
 import MegaMenu from "../MegaMenu";
 import assets from '../../assets/assets';
+import useGetDeviceType from '../../customHooks/useGetDeviceType';
+import MobileMenuOffcanvas from '../MobileMenuOffcanvas/mobileMenuOffcanvas';
+import useHeaderToFix from '../../customHooks/useHeaderToFix';
 
 const HeaderComponent = () => {
+    const { isMobile } = useGetDeviceType();
+    const isHeaderFixed = useHeaderToFix(1);
+    const visibleClass = isHeaderFixed ? styles.fixed : "";
+
     return (
-        <header className={styles.main_header}>
+        <header className={`${styles.main_header} ${visibleClass}`}>
             <div className={`container-fluid`}>
 
                 <div className={styles.header_container}>
                     <div className={styles.logo}>
                         <Link className={styles.logo_wrap} to={"/"}>
                             <figure className={`${styles.logo_wrapper} ratio`}>
-                                <img src={Logo} alt="My tour travels" />
+                                {isHeaderFixed ?
+                                    <img src={LogoWhite} alt="Indian Tour Options" />
+                                    :
+                                    <img src={LogoDark} alt="Indian Tour Options" />
+                                }
                             </figure>
                         </Link>
                     </div>
+                    {isMobile &&
+                        <div className={`${styles.menu_btn} d-sm-none`}>
+                            <MobileMenuOffcanvas />
+                        </div>
+                    }
                     <div className={`${styles.header_right_wrap} d-none d-lg-flex`}>
                         <ul className={styles.nav_list}>
                             {navLinks.map((item) => {
@@ -60,7 +77,7 @@ const HeaderComponent = () => {
 
 export default HeaderComponent;
 
-const navLinks = [
+export const navLinks = [
     {
         id: 1,
         link: "/",

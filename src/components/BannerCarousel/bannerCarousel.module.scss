@@ -5,18 +5,18 @@
     .img_section{
         width: 100%;
         position: relative;
-        &::before{
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #0000006b;
-            z-index: 3;
-        }
+        // &::before{
+        //     content: "";
+        //     position: absolute;
+        //     left: 0;
+        //     top: 0;
+        //     width: 100%;
+        //     height: 100%;
+        //     background-color: #0000006b;
+        //     z-index: 3;
+        // }
         figure{
-            --bs-aspect-ratio: calc((820/1920)* 100%);
+            --bs-aspect-ratio: calc((813/2400)* 100%);
             margin-bottom: 0;
             @include max(575.98){
                 --bs-aspect-ratio: calc((445/375)* 100%);
@@ -33,7 +33,7 @@
                 .carousel-item{
                     &.active{
                         img{
-                            transform: scale(1.1);
+                            // transform: scale(1.1);
                         }
                     }
                 }

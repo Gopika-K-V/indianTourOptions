@@ -8,7 +8,7 @@ const HomeBanner = () => {
     <Animate as='section' effect='fade-in' className={styles.home_banner}>
         <div className={styles.img_section}>
             <figure className={`ratio`}>
-                <img src={assets.BanneImg2} alt="banner_img"/>
+                <img src={assets.walkWeb} alt="banner_img"/>
             </figure>
         </div>
         <div className={styles.content_section}>

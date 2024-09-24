@@ -45,17 +45,9 @@ export default BannerCarousel;
 
 const BannerItems = [
   {
-    id: 1,
-    title: "Indian Tour Options",
-    subtitle: "Escape The Ordinary",
-    imgDesktop: assets.theyamWeb,
-    imgMobile: assets.theyamMob,
-    type: "image",
-  },
-  {
     id: 2,
-    title: "Cycle Tours",
-    subtitle: "Where you experience something different",
+    title: "",
+    subtitle: "",
     imgDesktop: assets.walkWeb,
     imgMobile: assets.walkMob,
     type: "image",
@@ -63,17 +55,25 @@ const BannerItems = [
   },
   {
     id: 3,
-    title: "Plantation Visit",
-    subtitle: "Indian ",
+    title: "",
+    subtitle: "",
     imgDesktop: assets.fdWeb,
     imgMobile: assets.fdMob,
     type: "image",
     
   },
   {
+    id: 1,
+    title: "",
+    subtitle: "",
+    imgDesktop: assets.theyamWeb,
+    imgMobile: assets.theyamMob,
+    type: "image",
+  },
+  {
     id: 4,
-    title: "Ayrvedic Treatment",
-    subtitle: "Indian ",
+    title: "",
+    subtitle: "",
     imgDesktop: assets.boatWeb,
     imgMobile: assets.boatMob,
     type: "image",
@@ -81,9 +81,9 @@ const BannerItems = [
   },
   {
     id: 5,
-    title: "Trekking",
-    subtitle: "Indian Tour Options",
-    imgDesktop: assets.elephantWeb,
+    title: "",
+    subtitle: "",
+    imgDesktop: assets.cycleWeb,
     imgMobile: assets.elephantMob,
     type: "image",
     
