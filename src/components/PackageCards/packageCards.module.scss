@@ -2,6 +2,7 @@
 
 .specification_section{
     padding: 60px 0;
+    background-color: $font-color;
     @include max(575.98){
         padding: 40px 0;
     }

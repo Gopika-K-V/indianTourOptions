@@ -3,7 +3,8 @@
 
 body{
     --bs-header-height: 90px;
-    --bs-body-bg: #{$body-bg};
+    --bs-body-bg: #{$font-color};
+    background-color: $font-color;
     overflow-x: hidden;
     // padding-top: var(--bs-header-height);
     background-color: var(--bs-body-bg);
@@ -42,7 +43,7 @@ main{
         font-size: 30px;
         font-weight: $bold;
         font-family: $secondary-font;
-        --bs-title-main-font-color : #{$font-color};
+        --bs-title-main-font-color : #{$white};
         color: var(--bs-title-main-font-color);
         text-align: center;
         margin-bottom: 0;
@@ -67,7 +68,7 @@ main{
 .sub_title{
     font-size: 16px;
     font-weight: $regular;
-    --bs-sub-title-font-color: #{$font-color};
+    --bs-sub-title-font-color: #{$white};
     color: var(--bs-sub-title-font-color);
     margin-top: 15px;
     margin-bottom: 0;

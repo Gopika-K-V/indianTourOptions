@@ -14,7 +14,7 @@ const BannerCards = () => {
                 watchSlidesProgress={true}
                 breakpoints={{
                     320: {
-                        slidesPerView: 2,
+                        slidesPerView: 1.5,
                         spaceBetween: 8,
                     },
                     768: {
@@ -23,7 +23,7 @@ const BannerCards = () => {
                     },
                     1024: {
                         slidesPerView: 3,
-                        spaceBetween: 25,
+                        spaceBetween: 16,
                     },
                 }}
 

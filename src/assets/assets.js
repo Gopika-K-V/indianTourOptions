@@ -25,10 +25,17 @@ const boatMob = new URL("./Images/banners/boat_mob.png", import.meta.url).href;
 const boatWeb = new URL("./Images/banners/boat_web.png", import.meta.url).href;
 
 const topBanner = new URL("./Images/banners/top_banner.png", import.meta.url).href;
+const topBannerAddon = new URL("./Images/banners/homeBannerAddon.jpg", import.meta.url).href;
 
 const plantation_tour = new URL("./Images/banners/plantation_tour.png", import.meta.url).href;
 
 const BannerVideo = new URL("./Images/banners/banner_video.mp4", import.meta.url).href;
+
+const miniBannerTheyyam = new URL("./Images/banners/mini_banner_theyyam.png", import.meta.url).href;
+const miniBannerFood = new URL("./Images/banners/mini_banner_food.png", import.meta.url).href;
+const miniBannerBoat = new URL("./Images/banners/mini_banner_boat.png", import.meta.url).href;
+const miniBannerBridge = new URL("./Images/banners/mini_banner_bridge.png", import.meta.url).href;
+
 
 const assets  ={
     destinationImg,
@@ -50,9 +57,15 @@ const assets  ={
     cycleWeb,
     boatMob,
     boatWeb,
+
+    miniBannerBoat,
+    miniBannerBridge,
+    miniBannerFood,
+    miniBannerTheyyam,
     
     plantation_tour,
     topBanner,
+    topBannerAddon,
     BannerVideo,
 }
 

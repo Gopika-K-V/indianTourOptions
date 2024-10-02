@@ -12,7 +12,7 @@ const Testimonials = () => {
   return (
     <Animate as='section' effect='fade-in' className={styles.testimonial_section}>
       <div className={`container`}>
-        <h2 className={`title_main`}>What Our Client's Say About Us</h2>
+        <h2 className={`title_main`}>Testimonials</h2>
         <div className={styles.testimonial_wrapper}>
           <Swiper
             modules={[Pagination, A11y]}

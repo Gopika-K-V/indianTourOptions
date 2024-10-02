@@ -3,25 +3,62 @@ import styles from "./homeBanner.module.scss";
 import Animate from '../Animate/animate';
 import assets from '../../assets/assets';
 
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+
 const HomeBanner = () => {
-  return (
-    <Animate as='section' effect='fade-in' className={styles.home_banner}>
-        <div className={styles.img_section}>
-            <figure className={`ratio`}>
-                <img src={assets.walkWeb} alt="banner_img"/>
-            </figure>
-        </div>
-        <div className={styles.content_section}>
+    return (
+        <section className={styles.home_banner}>
             <div className={`container`}>
-                <h1 className={styles.main_title}>
-                    INDIAN TOUR OPTIONS
-                </h1>
-                <h6 className={styles.banner_desc}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt</h6>
+                <Swiper
+                    modules={[Autoplay]}
+                    speed={3000}
+                    spaceBetween={0}
+                    slidesPerView={1}
+                    loop={true}
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    }}
+                >
+                    {SCROLLBANNER.map((item) => {
+                        return (
+                            <SwiperSlide key={item.id}>
+                                <div className={styles.img_section}>
+                                    <figure className={`ratio`}>
+                                        <img src={item?.image} alt="banner_img" />
+                                    </figure>
+                                </div>
+                            </SwiperSlide>
+                        )
+                    })}
+                </Swiper>
+
             </div>
-        </div>
-    </Animate>
-  )
+        </section>
+    )
 }
 
-export default HomeBanner
+export default HomeBanner;
+
+const SCROLLBANNER = [
+    {
+        id: 1,
+        image: assets.miniBannerTheyyam,
+    },
+    {
+        id: 2,
+        image: assets.miniBannerFood,
+    },
+    {
+        id: 3,
+        image: assets.miniBannerBoat,
+    },
+    {
+        id: 4,
+        image: assets.miniBannerBridge,
+    },
+]

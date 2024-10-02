@@ -20,11 +20,10 @@ const Home = () => {
         <BannerCarousel/>
         <ImageWithText/>
         <PackageSlider/>
-        <HomeBanner/>
         <PackageCards/>
         <DestinationSection/>
         <Testimonials/>
-        <IndianOptions/>
+        {/* <IndianOptions/> */}
     </>
   )
 }

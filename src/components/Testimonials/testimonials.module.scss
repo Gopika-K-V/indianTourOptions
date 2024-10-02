@@ -3,6 +3,7 @@
 .testimonial_section{
     padding: 60px 0;
     scroll-margin-top: 50px;
+    background-color: $font-color;
     @include max(575.98){
         padding: 40px 0;
     }

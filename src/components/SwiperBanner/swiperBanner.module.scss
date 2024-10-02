@@ -1,0 +1,63 @@
+@import "../../styles/utils";
+
+.swiper_banner {
+    padding: 80px 0;
+    :global{
+        .swiper {
+            overflow-y: visible;
+            padding-block: 65px;
+            @include max(575.98){
+                padding-block: 35px;
+            }
+            .swiper-slide{
+                opacity: 0.4;
+                overflow: hidden;
+                transition: .7s;
+                z-index: 1;
+                &.swiper-slide-active{
+                    transform: scale(1.1);
+                    opacity: 1;
+                    z-index: 3;
+                }
+            }
+        }
+    }
+}
+
+.slide_card {
+    position: relative;
+    text-align: center;
+    background-color: $white;
+    padding: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+    figure{
+        --bs-aspect-ratio: calc((250/200) * 100%);
+        border-radius: 8px;
+    }
+}
+
+.slide_content {
+    text-align: center;
+    border-radius: 8px;
+    padding-top: 16px;
+    h2 {
+        margin: 0 0 10px 0;
+        font-size: 24px;
+    }
+    p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    button {
+        background-color: #ff7b54;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover {
+            background-color: #ff5722;
+        }
+    }
+}

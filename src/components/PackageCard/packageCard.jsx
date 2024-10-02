@@ -10,8 +10,8 @@ const PackageCard = ({props}) => {
                 <img src={props?.image} alt={props?.title}/>
             </figure>
             <div className={styles.content_wrapper}>
-                <p className={styles.content_text}>{props?.title}</p>
-                <p className={`${styles.content_sub_text} mb-0`}>{props?.content}</p>
+                <p className={`${styles.content_text} text-center`}>{props?.title}</p>
+                <p className={`${styles.content_sub_text} mb-0 text-center`}>{props?.content}</p>
             </div>
         </Link>
     )
