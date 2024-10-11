@@ -4,26 +4,30 @@
     position: relative;
     background-color: $custom-yellow;
     border-radius: 30px;
-    padding: 16px;
-    img{
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        inset-inline-start: 15px;
-        pointer-events: none;
-        top: 50%;
-        transform: translateY(-50%);
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: max-content;
+    flex: 0 0 43px;
+    transition: 0.3s all ease-in-out;
+    &.expand{
+        flex: 1 1;
+        input{
+            width: 100%;
+        }
     }
     input{
         border:none;
         background-color: transparent;
         font-size: 16px;
         font-weight: $regular;
-        width: 100%;
         color: $font-color;
-        padding-inline-start: 45px;
+        padding-inline-start: 10px;
         outline: none;
         box-shadow: unset;
+        width: 0%;
+        transition: 0.3s all ease-in-out;
         &::placeholder{
             color: $font-color;
             opacity: 0.6;
@@ -31,6 +35,25 @@
     }
 }
 
+.search_overlay{
+    top: var(--bs-header-height);
+    background-color: #0000006e;
+    position: fixed;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+}
+
+.search_btn{
+    border: none;
+    background-color: unset;
+    padding: 0;
+    flex: 0 0 27px;
+    img{
+        width: 27px;
+        height: 27px;
+    }
+}
 .search_list{
     position: absolute;
     left: 0;

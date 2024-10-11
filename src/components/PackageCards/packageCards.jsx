@@ -9,7 +9,7 @@ const PackageCards = () => {
   return (
     <Animate as='section' effect='fade-in'  className={styles.specification_section} id="packageCard">
         <div className="container">
-            <h2 className="title_main">Specifications</h2>
+            <h2 className="title_main">Specializations</h2>
             <h6 className="sub_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
             <div className={styles.cards_wrapper}>
                 <div className={`row`}>

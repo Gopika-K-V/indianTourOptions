@@ -15,12 +15,13 @@
 
     transition: background-color 0.3s ease;
     &.fixed{
-        background-color: $font-color;
+        background-color: #0000006b;
         .header_right_wrap{
             .nav_list_item{
                 .nav_link{
                     span{
                         color: $white;
+                        text-shadow: 0px 1px 7px #000;
                     }
                 }
             }
@@ -116,6 +117,18 @@
 
 .menu_btn{
     margin-inline-start: auto;
+}
+
+.right_section{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 24px;
+    flex: 1 1;
+}
+.search_wrapper{
+    flex: 0 0 350px;
+    max-width: 350px;
 }
 
 .top_nav_contact{

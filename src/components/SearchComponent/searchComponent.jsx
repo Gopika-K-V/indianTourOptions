@@ -5,29 +5,35 @@ import assets from '../../assets/assets';
 
 const SearchComponent = ({ data }) => {
     const [query, setQuery] = useState("");
+    const [isActive, setIsActive] = useState(false);
 
-    // Handle search input and update the query state
+    const handleToggle = () => {
+        if (isActive) {
+            setQuery('');  // Clear the input when collapsing the search bar
+        }
+        setIsActive(!isActive);
+    };
+
     const handleSearch = (e) => {
         setQuery(e.target.value);
     };
 
-    // Filter data based on the search query
     const filteredData = data.filter(item =>
         item.title.toLowerCase().includes(query.toLowerCase())
     );
-
     return (
-        <div className={styles.search_component}>
-            <img src={assets.searchIcon} alt={"search icon"}/>
+        <div className={`${styles.search_component} ${isActive ? styles.expand : ""}`}>
+            <button className={styles.search_btn} onClick={handleToggle}>
+                <img src={assets.searchIcon} alt={"search icon"}/>
+            </button>
             <input
                 type="text"
                 placeholder="Search your package"
                 onChange={handleSearch}
                 value={query}
             />
-
-            {/* Show the list only if there is a search query and filtered results */}
-            {query && filteredData.length > 0 && (
+            {query && filteredData.length > 0 && isActive && (
+                <>
                 <ul className={styles.search_list}>
                     {filteredData.map(item => (
                         <li key={item.id} className={styles.search_list_item}>
@@ -40,9 +46,10 @@ const SearchComponent = ({ data }) => {
                         </li>
                     ))}
                 </ul>
+                <div className={styles.search_overlay} onClick={handleToggle}></div>
+                </>
             )}
 
-            {/* Show a message if no results are found and there's a search query */}
             {query && filteredData.length === 0 && (
                 <p>No results found</p>
             )}

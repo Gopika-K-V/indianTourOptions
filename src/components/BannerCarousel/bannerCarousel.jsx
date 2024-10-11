@@ -115,12 +115,12 @@ const BannerItems = [
       {
         id: 1,
         count: "30+",
-        desc: "Tours"
+        desc: "Tour Programs"
       },
       {
         id: 2,
         count: "200+",
-        desc: "Satisfied Customers"
+        desc: "Satisfied Clients"
       },
       {
         id: 2,

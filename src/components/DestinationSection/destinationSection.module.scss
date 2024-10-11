@@ -4,21 +4,20 @@
 .destinations_section{
     padding: 60px 0;
     scroll-margin-top: 50px;
-    background-color: $font-color;
     @include max(575.98){
         padding: 40px 0;
     }
     .destinations_wrapper{
         margin-top: 35px;
         :global(.row){
-            --bs-gutter-x: 25px;
+            --bs-gutter-x: 40px;
             --bs-gutter-y: 25px;
             @include max(575.98){       
                 --bs-gutter-x: 0px;
             }
         }
         .destination_item{
-            border-radius: 8px;
+            border-radius: $border-radius;
             display: block;
             text-decoration: none;
             height: 100%;
@@ -27,7 +26,7 @@
             .img_wrapper{
                 width: 100%;
                 figure{
-                    --bs-aspect-ratio: calc((250/335) * 100%);
+                    --bs-aspect-ratio: calc((370/335) * 100%);
                     img{
                         transition: 0.3s all ease-in-out;
                         will-change: transform;
@@ -42,14 +41,20 @@
                 }
             }
             .destination_content{
-                padding: 35px;
+                padding: 20px 30px;
                 .destination_title{
-                    font-size: 18px;
+                    font-size: 16px;
                     font-weight: $bold;
-                    color: $white;
+                    text-align: center;
+                    color: $font-color;
                     line-height: 1.4;
                     font-family: $primary-font;
                     margin-bottom: 0;
+                    padding: 6px 12px;
+                    width: max-content;
+                    margin-inline: auto;
+                    background-color: $custom-yellow;
+                    border-radius: $border-radius;
                 }
                 .destination_desc{
                     font-size: 14px;

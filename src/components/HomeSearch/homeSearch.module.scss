@@ -1,6 +1,7 @@
 @import "../../styles/utils";
 
 .home_search_container{
-    
-    margin-top: 24px;
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-end;
 }

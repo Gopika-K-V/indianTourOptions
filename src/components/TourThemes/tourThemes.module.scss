@@ -1,0 +1,16 @@
+@import "../../styles/utils";
+
+.tour_themes_section{
+    padding: 60px 0;
+    scroll-margin-top: 50px;
+    @include max(575.98){
+        padding: 40px 0;
+    }
+    .themes_wrapper{
+        margin-top: 40px;
+        :global(.row){
+            --bs-gutter-x: 16px;
+            --bs-gutter-y: 16px;
+        }
+    }
+}

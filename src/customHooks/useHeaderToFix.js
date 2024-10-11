@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 
 const useHeaderToFix = (threshold) => {
   const [isHeaderFixed, setIsHeaderFixed] = useState(false);
-  console.log(threshold,"djgdhf");
   
   useEffect(() => {
     const handleScroll = () => {

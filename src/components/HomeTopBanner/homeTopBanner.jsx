@@ -2,7 +2,6 @@ import React from 'react'
 import styles from "./homeTopBanner.module.scss";
 import assets from '../../assets/assets';
 import BannerCards from './BannerCards/bannerCards';
-import HomeSearch from '../HomeSearch/homeSearch';
 
 const HomeTopBanner = () => {
     return (
@@ -17,7 +16,6 @@ const HomeTopBanner = () => {
                             <h4 className={`${styles.sub_title} mb-0`}>
                                 Discover with Indian Tour Options. Get the best service with us
                             </h4>
-                            <HomeSearch />
                         </div>
                     </div>
                     <div className={`col-12 col-md-6 col-lg-7`}>
@@ -27,7 +25,7 @@ const HomeTopBanner = () => {
                             </figure>
                         </div>
                     </div>
-                    <div className={`col-12 col-md-8 col-lg-7 ms-auto`}>
+                    <div className={`col-12 ms-auto`}>
                         <div className={styles.banner_cards}>
                             <BannerCards />
                         </div>

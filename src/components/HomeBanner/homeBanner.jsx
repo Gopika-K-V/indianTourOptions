@@ -12,32 +12,29 @@ import { Autoplay } from 'swiper/modules';
 const HomeBanner = () => {
     return (
         <section className={styles.home_banner}>
-            <div className={`container`}>
-                <Swiper
-                    modules={[Autoplay]}
-                    speed={3000}
-                    spaceBetween={0}
-                    slidesPerView={1}
-                    loop={true}
-                    autoplay={{
-                        delay: 3000,
-                        disableOnInteraction: false,
-                    }}
-                >
-                    {SCROLLBANNER.map((item) => {
-                        return (
-                            <SwiperSlide key={item.id}>
-                                <div className={styles.img_section}>
-                                    <figure className={`ratio`}>
-                                        <img src={item?.image} alt="banner_img" />
-                                    </figure>
-                                </div>
-                            </SwiperSlide>
-                        )
-                    })}
-                </Swiper>
-
-            </div>
+            <Swiper
+                modules={[Autoplay]}
+                speed={3000}
+                spaceBetween={0}
+                slidesPerView={1}
+                loop={true}
+                autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                }}
+            >
+                {SCROLLBANNER.map((item) => {
+                    return (
+                        <SwiperSlide key={item.id}>
+                            <div className={styles.img_section}>
+                                <figure className={`ratio`}>
+                                    <img src={item?.image} alt="banner_img" />
+                                </figure>
+                            </div>
+                        </SwiperSlide>
+                    )
+                })}
+            </Swiper>
         </section>
     )
 }

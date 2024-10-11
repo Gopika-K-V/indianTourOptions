@@ -4,10 +4,12 @@ import ContactTiles from '../../components/ContactTiles/contactTiles';
 
 const AboutUs = () => {
   return (
-    <div className={`pt-5 mt-5`}>
-      <ContactTiles />
-      <Contact />
-    </div>
+    <main style={{ '--bs-body-bg': '#FFFFFF' }}>
+      <div className={`pt-5 mt-5`}>
+        <ContactTiles />
+        <Contact />
+      </div>
+    </main>
   )
 }
 

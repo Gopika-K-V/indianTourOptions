@@ -12,19 +12,23 @@ import IndianOptions from '../../components/IndianOptions/indianOptions';
 import PackageSlider from '../../components/PackageSlider/packageSlider';
 import HomeSearch from '../../components/HomeSearch/homeSearch';
 import HomeTopBanner from '../../components/HomeTopBanner/homeTopBanner';
+import TourThemes from '../../components/TourThemes/tourThemes';
 
 const Home = () => {
   return (
-    <>
+    <main style={{ '--bs-body-bg': '#141414' }}>
         <HomeTopBanner/>
         <BannerCarousel/>
         <ImageWithText/>
-        <PackageSlider/>
-        <PackageCards/>
-        <DestinationSection/>
-        <Testimonials/>
+        <div className="black_bg">
+          <PackageSlider/>
+          <PackageCards/>
+          <TourThemes/>
+          <DestinationSection/>
+          <Testimonials/>
+        </div>
         {/* <IndianOptions/> */}
-    </>
+    </main>
   )
 }
 

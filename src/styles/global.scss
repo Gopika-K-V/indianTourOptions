@@ -7,7 +7,6 @@ body{
     background-color: $font-color;
     overflow-x: hidden;
     // padding-top: var(--bs-header-height);
-    background-color: var(--bs-body-bg);
     @include max(575.98){
         --bs-header-height: 60px;
     }
@@ -27,8 +26,59 @@ body{
       }
     
 }
+
+.swiper-button-prev,.swiper-button-next {
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='16' viewBox='0 0 10 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.01302 0.941406L9.5293 8.44141L2.01302 15.9414L0.678875 14.6102L6.86102 8.44141L0.678875 2.27266L2.01302 0.941406Z' fill='%231C1B1F'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: 16px;
+    border-radius: 100%;
+    overflow: hidden;
+    right: 10px;
+    position: absolute;
+    top: calc(50% - 40px);
+    z-index: 10;
+    transition: all .3s ease-in-out;
+    border: 1px solid #d4cccc;
+    background-color: $white;
+    box-shadow: 0 0 28px 0 rgba(0, 0, 0, .11);
+}
+.swiper-button-prev{
+    transform: scaleX(-1);
+    right: unset;
+    left: 10px;
+}
+
+.black_bg{
+    position: relative;
+    background-color: $font-color;
+    .title_main,.sub_title{
+        position: relative;
+        z-index: 3;
+
+    }
+    &::before{
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../components/PackageSlider/black-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        filter: blur(30px);
+        z-index: 0;
+    }
+    
+}
 main{
-    --bs-body-bg: #{$body-bg};
     background-color: var(--bs-body-bg);
     font-family: $primary-font;
 }

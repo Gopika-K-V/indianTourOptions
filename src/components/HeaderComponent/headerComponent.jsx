@@ -8,10 +8,11 @@ import assets from '../../assets/assets';
 import useGetDeviceType from '../../customHooks/useGetDeviceType';
 import MobileMenuOffcanvas from '../MobileMenuOffcanvas/mobileMenuOffcanvas';
 import useHeaderToFix from '../../customHooks/useHeaderToFix';
+import HomeSearch from '../HomeSearch/homeSearch';
 
 const HeaderComponent = () => {
     const { isMobile } = useGetDeviceType();
-    const isHeaderFixed = useHeaderToFix(1);
+    const isHeaderFixed = useHeaderToFix(500);
     const visibleClass = isHeaderFixed ? styles.fixed : "";
 
     return (
@@ -30,21 +31,26 @@ const HeaderComponent = () => {
                             </figure>
                         </Link>
                     </div>
-                    {isMobile &&
-                        <div className={`${styles.menu_btn} d-sm-none`}>
-                            <MobileMenuOffcanvas />
-                        </div>
-                    }
-                    <div className={`${styles.header_right_wrap} d-none d-lg-flex`}>
-                        <ul className={styles.nav_list}>
-                            {navLinks.map((item) => {
-                                return (
-                                    <Fragment key={item.id}>
-                                        <li className={styles.nav_list_item}>
-                                            <Link className={styles.nav_link} to={item?.link}>
-                                                <span>{item.linkText}</span>
-                                            </Link>
-                                            {/* {item?.megaMenu &&
+                    <div className={styles.right_section}>
+                        {isMobile ?
+                            <div className={`${styles.menu_btn} d-sm-none`}>
+                                <MobileMenuOffcanvas />
+                            </div>
+                            :
+                            <div className={styles.search_wrapper}>
+                                <HomeSearch />
+                            </div>
+                        }
+                        <div className={`${styles.header_right_wrap} d-none d-lg-flex`}>
+                            <ul className={styles.nav_list}>
+                                {navLinks.map((item) => {
+                                    return (
+                                        <Fragment key={item.id}>
+                                            <li className={styles.nav_list_item}>
+                                                <Link className={styles.nav_link} to={item?.link}>
+                                                    <span>{item.linkText}</span>
+                                                </Link>
+                                                {/* {item?.megaMenu &&
                                                 <div className={styles.mega_menu_wrapper}>
                                                     <ul>
                                                         {item?.megaMenu.map((item) => {
@@ -55,20 +61,19 @@ const HeaderComponent = () => {
                                                     </ul>
                                                 </div>
                                             } */}
-                                            {/* {item?.megaMenu &&
+                                                {/* {item?.megaMenu &&
                                                 <div className={styles.mega_menu_wrapper}>
                                                     <MegaMenu menuLinks={item?.megaMenu}/>
                                                 </div>
                                             } */}
-                                        </li>
-                                    </Fragment>
-                                )
-                            })}
-                        </ul>
+                                            </li>
+                                        </Fragment>
+                                    )
+                                })}
+                            </ul>
+                        </div>
                     </div>
-                    <div className={`${styles.mobile_nav} d-lg-none`}>
 
-                    </div>
                 </div>
             </div>
         </header>
@@ -78,41 +83,46 @@ const HeaderComponent = () => {
 export default HeaderComponent;
 
 export const navLinks = [
+    // {
+    //     id: 1,
+    //     link: "/",
+    //     linkText: "Destinations",
+    //     megaMenu: [
+    //         {
+    //             id: 1,
+    //             menuLink: "/",
+    //             menuText: "asdasd",
+    //             menuImage: assets.destinationImg,
+    //         },
+    //         {
+    //             id: 2,
+    //             menuLink: "/",
+    //             menuText: "assssss",
+    //             menuImage: assets.SpecificationImage,
+    //         },
+    //         {
+    //             id: 3,
+    //             menuLink: "/",
+    //             menuText: "adddddddd",
+    //             menuImage: assets.destinationImg,
+    //         },
+    //         {
+    //             id: 4,
+    //             menuLink: "/",
+    //             menuText: "affffffffffff",
+    //             menuImage: assets.SpecificationImage,
+    //         },
+    //     ]
+    // },
     {
-        id: 1,
+        id: 6,
         link: "/",
-        linkText: "Destinations",
-        megaMenu: [
-            {
-                id: 1,
-                menuLink: "/",
-                menuText: "asdasd",
-                menuImage: assets.destinationImg,
-            },
-            {
-                id: 2,
-                menuLink: "/",
-                menuText: "assssss",
-                menuImage: assets.SpecificationImage,
-            },
-            {
-                id: 3,
-                menuLink: "/",
-                menuText: "adddddddd",
-                menuImage: assets.destinationImg,
-            },
-            {
-                id: 4,
-                menuLink: "/",
-                menuText: "affffffffffff",
-                menuImage: assets.SpecificationImage,
-            },
-        ]
+        linkText: "Gallery",
     },
     {
         id: 2,
         link: "/",
-        linkText: "Specifications",
+        linkText: "Blogs",
     },
     {
         id: 3,

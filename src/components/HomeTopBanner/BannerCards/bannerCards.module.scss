@@ -1,1 +1,7 @@
 @import "../../../styles/utils";
+
+.slider_wrap{
+    @include min(768){
+        padding-inline: 80px;
+    }
+}

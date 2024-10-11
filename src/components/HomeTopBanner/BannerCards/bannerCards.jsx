@@ -8,6 +8,7 @@ import PackageCard from '../../PackageCard/packageCard';
 
 const BannerCards = () => {
     return (
+        <div className={styles.slider_wrap}>
             <Swiper
                 spaceBetween={20}
                 slidesPerView={3}
@@ -23,7 +24,11 @@ const BannerCards = () => {
                     },
                     1024: {
                         slidesPerView: 3,
-                        spaceBetween: 16,
+                        spaceBetween: 36,
+                    },
+                    1200: {
+                        slidesPerView: 4,
+                        spaceBetween: 36,
                     },
                 }}
 
@@ -32,11 +37,12 @@ const BannerCards = () => {
                 {specificationCards.map((item) => {
                     return (
                         <SwiperSlide key={item.id}>
-                            <PackageCard props={item}/>
+                            <PackageCard props={item} />
                         </SwiperSlide>
                     )
                 })}
             </Swiper>
+        </div>
     )
 }
 

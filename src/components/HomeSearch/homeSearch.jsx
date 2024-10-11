@@ -6,7 +6,7 @@ import { specificationCards } from '../PackageCards/packageCards';
 const HomeSearch = () => {
     const items = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry', 'Fig', 'Grape'];
     return (
-        <div className={`${styles.home_search_container} w-100`}>
+        <div className={styles.home_search_container}>
             <SearchComponent data={specificationCards}/>
         </div>
     )

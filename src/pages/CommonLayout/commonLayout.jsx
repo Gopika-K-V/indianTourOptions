@@ -21,9 +21,8 @@ const CommonLayout = () => {
     <>
       <ScrollToTop />
       <HeaderComponent/>
-      <main>
           <Outlet/>
-      </main>
+      
       <FooterComponent/>
       {isMobile ?
         <FixedButtonsMobile/>
