@@ -30,6 +30,8 @@ const topBannerAddon = new URL("./Images/banners/homeBannerAddon.jpg", import.me
 const plantation_tour = new URL("./Images/banners/plantation_tour.png", import.meta.url).href;
 
 const BannerVideo = new URL("./Images/banners/banner_video.mp4", import.meta.url).href;
+const ExploreVideo = new URL("./Images/banners/explore_video.mp4", import.meta.url).href;
+const BookTour = new URL("./Images/banners/book_tour.mp4", import.meta.url).href;
 
 const miniBannerTheyyam = new URL("./Images/banners/mini_banner_theyyam.png", import.meta.url).href;
 const miniBannerFood = new URL("./Images/banners/mini_banner_food.png", import.meta.url).href;
@@ -67,6 +69,8 @@ const assets  ={
     topBanner,
     topBannerAddon,
     BannerVideo,
+    ExploreVideo,
+    BookTour,
 }
 
 export default assets;

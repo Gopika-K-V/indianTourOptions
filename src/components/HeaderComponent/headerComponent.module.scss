@@ -27,6 +27,18 @@
             }
         }
     }
+    &:global(.white_header){
+        background-color: $white;
+        .header_right_wrap{
+            .nav_list_item{
+                .nav_link{
+                    span{
+                        color: $black;
+                    }
+                }
+            }
+        }
+    }
     .header_container{
         display: flex;
         align-items: center;

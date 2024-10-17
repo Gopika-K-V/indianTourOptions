@@ -125,8 +125,6 @@
             bottom: 30%;
             transform: translateY(50%);
             @include max(575.98){
-                right: unset;
-                left: unset;
                 bottom: 45%;
             }
         }

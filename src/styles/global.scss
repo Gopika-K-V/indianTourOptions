@@ -12,19 +12,23 @@ body{
     }
     &::-webkit-scrollbar {
         width: 6px;
-      }
-      
-      /* Track */
-      &::-webkit-scrollbar-track {
+    }
+    
+    /* Track */
+    &::-webkit-scrollbar-track {
         background: transparent; 
-      }
-       
-      /* Handle */
-      &::-webkit-scrollbar-thumb {
+    }
+    
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
         background: #000; 
         border-radius: 8px;
-      }
-    
+    }
+    &.dark-header{
+        header{
+            background-color: #0000006b;
+        }
+    }
 }
 
 .swiper-button-prev,.swiper-button-next {
@@ -57,10 +61,9 @@ body{
 .black_bg{
     position: relative;
     background-color: $font-color;
-    .title_main,.sub_title{
+    > *{
         position: relative;
         z-index: 3;
-
     }
     &::before{
         position: absolute;

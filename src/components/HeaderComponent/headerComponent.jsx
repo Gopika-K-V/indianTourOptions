@@ -116,7 +116,7 @@ export const navLinks = [
     // },
     {
         id: 6,
-        link: "/",
+        link: "/gallery",
         linkText: "Gallery",
     },
     {

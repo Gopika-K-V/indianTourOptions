@@ -27,7 +27,10 @@ const CommonLayout = () => {
       {isMobile ?
         <FixedButtonsMobile/>
       :
+        <>
         <FixedButtons/>
+        <FixedButtons isRight/>
+        </>
       }
     </>
   );

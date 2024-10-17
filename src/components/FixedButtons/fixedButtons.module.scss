@@ -2,47 +2,85 @@
 
 .fixed_part{
     position: fixed;
-    left: 0px;
-    top: 38%;
+    left: 10px;
+    top: 30%;
     z-index: 9;
     height: auto;
+
+    border-radius: 40px;
+    background-color: $black;
+    padding: 4px;
+    transition: background-color 1s ease, opacity 1s ease-in-out;
+    &.right_side{
+        left: unset;
+        right: 10px;
+        top: unset;
+        bottom: 2%;
+        .button_wrapper{
+            .icon_btn{
+                span{
+                    left: unset;
+                    right: 30px;
+                    transform: translate(-60px, -50%);
+                    transform-origin: right;
+                    align-items: flex-end;
+                }
+            }
+            @include hover{
+                span{
+                    transform: translate(-40px, -50%);
+                }
+            }
+        }
+    }
 }
 .button_wrapper{
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
     .icon_btn{
-        border-radius: 40px;
-        background-color: $font-color;
-        --bs-btn-padding-x: 4px;
-        --bs-btn-padding-y: 4px;
         display: flex;
         align-items: center;
-        justify-content: flex-end;
-        transform: translateX(10px);
-        transition: 0.3s all ease-in-out;
-        width: max-content;
+        background-color: transparent;
+        border: none;
+        width: 55px;
+        height: 55px;
+        position: relative;
+        border-radius: 50%;
+        @include hover{
+            &:not(.no_hover){
+                background-color: $custom-yellow;
+                svg{
+                    path{
+                        fill: $font-color !important;
+                    }
+                }
+            }
+            span{
+                opacity: 1;
+                transition: transform 0.45s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.45s cubic-bezier(0.075, 0.82, 0.165, 1);
+                transform: translate(40px, -50%);
+                transform-origin: right;
+            }
+        }
         span{
-            color: $font-color;
-            font-size: 0;
-            padding-inline-end: 0px;
-            transition: 0.3s all ease-in-out;
+            position: absolute;
+            white-space: nowrap;
+            left: 30px;
+            background-color: $white;
+            padding: 10px 13px;
+            top: 50%;
+            transform: translate(60px, -50%);
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            border-radius: 40px;
+            pointer-events: none;
+            line-height: 1.2;
+            font-size: size(14);
+            font-weight: $semi-bold;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, .33);
         }
         svg{
             path{
                 transition: 0.3s all ease-in-out;
-            }
-        }
-        @include hover{
-            background-color: $custom-yellow;
-            span{
-                font-size: 14px;
-                padding-inline-end: 10px;
-            }
-            svg{
-                path{
-                    fill: $font-color !important;
-                }
             }
         }
     }

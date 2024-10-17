@@ -13,6 +13,8 @@ import PackageSlider from '../../components/PackageSlider/packageSlider';
 import HomeSearch from '../../components/HomeSearch/homeSearch';
 import HomeTopBanner from '../../components/HomeTopBanner/homeTopBanner';
 import TourThemes from '../../components/TourThemes/tourThemes';
+import VideoLeftContent from '../../components/VideoLeftContent';
+import VideoRightContent from '../../components/VideoRightContent/videoRightContent';
 
 const Home = () => {
   return (
@@ -22,8 +24,10 @@ const Home = () => {
         <ImageWithText/>
         <div className="black_bg">
           <PackageSlider/>
+          <VideoRightContent/>
           <PackageCards/>
           <TourThemes/>
+          <VideoLeftContent/>
           <DestinationSection/>
           <Testimonials/>
         </div>

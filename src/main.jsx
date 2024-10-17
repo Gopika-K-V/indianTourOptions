@@ -6,6 +6,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './pages/Home';
 import CommonLayout from './pages/CommonLayout/commonLayout.jsx';
 import Kochi from './pages/Kochi/kochi';
+import Gallery from './pages/Gallery/index.js';
 import ContactUs from './pages/ContactUs/index.js';
 
 
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/kochi",
         element: <Kochi/>
+      },
+      {
+        path: "/gallery",
+        element: <Gallery/>
       },
     ],
   },
